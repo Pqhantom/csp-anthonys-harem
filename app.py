@@ -15,6 +15,7 @@ from erik.erik import erik_bp
 from isaac.isaac import isaac_bp
 from samuel.samuel import samuel_bp
 from ethan.ethan import ethan_bp
+from create_task.create_task import create_task_bp
 
 at_school = True     # CHANGE THIS VARIABLE DEPENDING IF YOURE AT SCHOOL OR AT HOME, SHOULD BE SET TO FALSE ON GITHUB
 domain = ""
@@ -160,17 +161,13 @@ def update(id):
 
     return redirect("/games_database")
 
-
-@app.route("/create_task")
-def create_task():
-    return render_template("create_task.html")
-
 app.register_blueprint(api_bp)
 app.register_blueprint(anthony_bp)
 app.register_blueprint(erik_bp)
 app.register_blueprint(samuel_bp)
 app.register_blueprint(ethan_bp)
 app.register_blueprint(isaac_bp)
+app.register_blueprint(create_task_bp)
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=6969)

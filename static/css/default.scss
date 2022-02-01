@@ -154,6 +154,43 @@ $bottom-gradient-color-light: #fbf4b5;
             border: 1px solid var(--content-text-color);
         }
     }
+
+    @keyframes transitionIn {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    .first {
+        animation-name: transitionIn;
+        animation-duration: 0.5s; 
+    }
+
+    .second {
+        animation-name: transitionIn;
+        animation-duration: 0.5s;
+        animation-delay: 0.5s; 
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+
+    .third {
+        animation-name: transitionIn;
+        animation-duration: 0.5s; 
+        animation-delay: 1s; 
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+
+    .mainText {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
 }
 
 
