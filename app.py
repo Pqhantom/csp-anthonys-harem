@@ -161,6 +161,10 @@ def update(id):
     return redirect("/games_database")
 
 
+@app.route("/create_task")
+def create_task():
+    return render_template("create_task.html")
+
 app.register_blueprint(api_bp)
 app.register_blueprint(anthony_bp)
 app.register_blueprint(erik_bp)
