@@ -24,3 +24,7 @@ def chris():
 @create_task_bp.route("/tigran")
 def tigran():
     return render_template("tigran.html")
+
+@create_task_bp.route("/derek")
+def derek():
+    return render_template("derek.html")
