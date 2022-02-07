@@ -15,8 +15,12 @@ def anthony():
 
 @create_task_bp.route("/matthew")
 def matthew():
-    return render_template("matthew.html")x
+    return render_template("matthew.html")
 
-@create_task_bp.route("chris.html")
+@create_task_bp.route("/chris")
 def chris():
     return render_template("chris.html")
+
+@create_task_bp.route("/tigran")
+def tigran():
+    return render_template("tigran.html")
